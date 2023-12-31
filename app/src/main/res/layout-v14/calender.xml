@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/loginbkg"
+    tools:context=".UserDashboardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/loginbkg">
+        <ImageView
+            android:id="@+id/navButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="21dp"
+            android:contentDescription="@string/navigationbutton"
+            android:src="@drawable/ic_menu" />
+        <ImageView
+            android:id="@+id/heading"
+            android:layout_width="357dp"
+            android:layout_height="203dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/headingimage"
+            android:elevation="6dp"
+            android:fadingEdge="horizontal"
+            android:src="@drawable/heading_image1"
+            android:visibility="visible" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/calenderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/custom_edittext"
+            android:visibility="visible"
+            app:cardElevation="30dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:drawable/screen_background_dark"
+                android:backgroundTint="#424242"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:visibility="visible">
+                <TextView
+                    android:id="@+id/calenderpage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/custom_edittext"
+                    android:paddingTop="10dp"
+                    android:text="@string/calender"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="295dp"
+                    android:layout_gravity="center" />
+                <ListView
+                    android:id="@+id/bookingList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/custom_edittext"
+                    android:padding="5dp"
+                    android:visibility="visible"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

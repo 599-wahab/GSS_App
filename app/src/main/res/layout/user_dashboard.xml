@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbkg">
+    <!-- Navigation Menu / Sidebar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/loginbkg"
+        tools:context=".UserDashboardActivity">
+        <!-- Three Lines Button (Custom Navigation Button) -->
+        <!-- Sidebar Layout (Initially Hidden) -->
+
+        <ImageView
+            android:id="@+id/heading"
+            android:layout_width="357dp"
+            android:layout_height="203dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/Heading_Image"
+            android:elevation="6dp"
+            android:fadingEdge="horizontal"
+            android:src="@drawable/heading_image1"
+            android:visibility="visible" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custom_edittext"
+            android:visibility="visible"
+            app:cardElevation="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:drawable/screen_background_dark"
+                android:backgroundTint="#424242"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/heading"
+                app:layout_constraintVertical_bias="0.205">
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/custom_edittext"
+                    android:includeFontPadding="true"
+                    android:padding="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingRight="5dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+                <!-- Create a horizontal LinearLayout for the first row of buttons -->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:id="@+id/bookingLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="152dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+                        <!-- ImageView for the button image -->
+                        <!-- TextView for the button label -->
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:contentDescription="@string/booking"
+                            android:src="@drawable/booking" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Booking"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/calenderLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="152dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+                        <!-- ImageView for the button image -->
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:contentDescription="@string/Calender"
+                            android:src="@drawable/calendar" />
+                        <!-- TextView for the button label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/calendar"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Create another horizontal LinearLayout for the second row of buttons -->
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:id="@+id/evntsLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="152dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <!-- ImageView for the button image -->
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:contentDescription="@string/Events"
+                            android:src="@drawable/events" />
+                        <!-- TextView for the button label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/EvEnts"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/galleryLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="152dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_edittext"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <!-- ImageView for the button image -->
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:contentDescription="@string/Gallery"
+                            android:src="@drawable/gallery" />
+                        <!-- TextView for the button label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gallery"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

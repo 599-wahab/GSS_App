@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/loginbkg">
+
+<!-- Navigation Menu / Sidebar -->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbkg"
+    tools:context=".UserDashboardActivity">
+    <!-- Sidebar Layout (Initially Hidden) -->
+
+    <ImageView
+        android:id="@+id/navButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="21dp"
+        android:contentDescription="@string/gall_nav_button"
+        android:src="@drawable/ic_menu"/>
+
+    <RelativeLayout
+        android:id="@+id/sidebarLayout"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:background="@drawable/custom_edittext"
+        android:backgroundTint="#B0606060"
+        android:visibility="gone">
+
+        <!-- Circular User Profile Section -->
+        <ImageView
+            android:id="@+id/circularUserProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="180dp"
+            android:background="@drawable/custom_edittext"
+            android:contentDescription="User_Profile"
+            android:src="@drawable/ic_baseline_person_24" />
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="273dp"
+            android:layout_height="46dp"
+            android:layout_below="@id/circularUserProfile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_edittext"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textStyle="bold" />
+        <!-- Edit Profile Button -->
+        <Button
+            android:id="@+id/editProfileButton"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/custom_edittext"
+            android:text="Edit Profile" />
+        <!-- Customer Care Button -->
+        <Button
+            android:id="@+id/customerCareButton"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editProfileButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/custom_edittext"
+            android:text="Customer Care" />
+        <!-- Feedback Button -->
+        <Button
+            android:id="@+id/feedbackButton"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/customerCareButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/custom_edittext"
+            android:text="Feedback" />
+    </RelativeLayout>
+    <!-- Search Bar Section -->
+
+
+    <ImageView
+        android:id="@+id/heading"
+        android:layout_width="357dp"
+        android:layout_height="203dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:contentDescription="Heading Image"
+        android:elevation="6dp"
+        android:fadingEdge="horizontal"
+
+        android:src="@drawable/heading_image1"
+        android:visibility="visible" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/eventsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_edittext"
+        android:visibility="visible"
+        app:cardElevation="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:drawable/screen_background_dark"
+            android:backgroundTint="#424242"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/gallerypage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/custom_edittext"
+                android:paddingTop="10dp"
+                android:text="Gallery"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/gallery1Layout"
+                    android:layout_width="0dp"
+                    android:layout_height="152dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edittext"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!-- ImageView for the button image -->
+
+                    <!-- TextView for the button label -->
+                    <ImageView
+                        android:id="@+id/gallery1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="event"
+                        android:padding="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:src="@drawable/gallery_1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gallery2Layout"
+                    android:layout_width="0dp"
+                    android:layout_height="152dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edittext"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!-- ImageView for the button image -->
+                    <ImageView
+                        android:id="@+id/gallery2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="event"
+                        android:padding="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:src="@drawable/gallery_2" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Create another horizontal LinearLayout for the second row of buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:baselineAligned="true"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/gallery3Layout"
+                    android:layout_width="0dp"
+                    android:layout_height="152dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edittext"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- ImageView for the button image -->
+                    <ImageView
+                        android:id="@+id/gallery3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Events"
+                        android:padding="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:src="@drawable/gallery_3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gallery4Layout"
+                    android:layout_width="0dp"
+                    android:layout_height="152dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edittext"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- ImageView for the button image -->
+                    <ImageView
+                        android:id="@+id/gallery4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="event1"
+                        android:padding="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:src="@drawable/gallery_4" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+</RelativeLayout>

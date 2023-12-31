@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbkg"
+    tools:context=".UserRegistrationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/heading"
+            android:layout_width="357dp"
+            android:layout_height="203dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/heading_Image"
+            android:elevation="6dp"
+            android:fadingEdge="horizontal"
+            android:src="@drawable/heading_image" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/custom_edittext"
+            app:cardElevation="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableStart="@drawable/ic_baseline_email_24"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:padding="8dp"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textColorHighlight="@color/cardview_dark_background"
+                    android:autofillHints="" />
+
+                <LinearLayout
+                    android:layout_width="303dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="9dp">
+
+                    <Spinner
+                        android:id="@+id/countryCodeSpinner"
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:background="@drawable/custom_edittext"
+                        android:ellipsize="end"/>
+
+                    <EditText
+                        android:id="@+id/phoneNumber"
+                        android:layout_width="180dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_edittext"
+                        android:hint="@string/phone_number"
+                        android:inputType="phone"
+                        android:padding="5dp"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:textColorHighlight="@color/cardview_dark_background"
+                        android:autofillHints="" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableStart="@drawable/ic_baseline_person_24"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/username"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:imeOptions="actionNext"
+                    android:imeActionLabel="Next"
+                    android:textColorHighlight="@color/cardview_dark_background"
+                    android:autofillHints="" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="40dp"
+                        android:background="@null"
+                        android:drawableStart="@drawable/ic_baseline_lock_24"
+                        android:drawablePadding="8dp"
+                        android:hint="@string/Password"
+                        android:inputType="textPassword"
+                        android:padding="8dp"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:textColorHighlight="@color/cardview_dark_background"
+                        android:autofillHints="" />
+
+                    <ImageView
+                        android:id="@+id/passwordVisibilityToggle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/toggle_password_visibility"
+                        android:src="@drawable/ic_baseline_visibility_24" />
+                </RelativeLayout>
+
+                <!-- Similar layout for Confirm Password -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext">
+
+                    <EditText
+                        android:id="@+id/confirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="40dp"
+                        android:background="@null"
+                        android:drawableStart="@drawable/ic_baseline_lock_24"
+                        android:drawablePadding="8dp"
+                        android:hint="@string/confirm_password"
+                        android:inputType="textPassword"
+                        android:padding="8dp"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:textColorHighlight="@color/cardview_dark_background"
+                        android:autofillHints="" />
+
+                    <ImageView
+                        android:id="@+id/confirmPasswordVisibilityToggle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/toggle_confirm_password_visibility"
+                        android:src="@drawable/ic_baseline_visibility_24" />
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/registerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="#FF9800"
+                    android:text="@string/register"
+                    android:textSize="18sp"
+                    android:background="@drawable/custom_edittext"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

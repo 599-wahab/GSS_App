@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbkg"
+    tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/heading"
+        android:layout_width="357dp"
+        android:layout_height="203dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:contentDescription="Heading Image"
+        android:elevation="6dp"
+        android:fadingEdge="horizontal"
+        android:src="@drawable/heading_image1" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_edittext">
+
+        <LinearLayout
+            android:layout_width="306dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/loginText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textAlignment="center"
+                android:textColor="#FF9800"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="8dp"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/holo_orange_dark"
+                android:padding="8dp"
+                android:imeOptions="actionNext"
+                android:imeActionLabel="Next"
+                android:textColorHighlight="@color/cardview_dark_background" />
+
+            <!-- Password Field -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:autofillHints=""
+                    android:background="@null"
+                    android:drawableLeft="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/password"
+                    android:imeActionLabel="Done"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:padding="8dp"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textColorHighlight="@color/cardview_dark_background" />
+
+                <ImageView
+                    android:id="@+id/passwordVisibilityToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Toggle Password Visibility"
+                    android:src="@drawable/ic_baseline_visibility_24" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#D7FF9800"
+                android:text="Login"
+                android:background="@drawable/custom_edittext"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/signupText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fadingEdge="vertical"
+        android:padding="8dp"
+        android:background="@drawable/custom_edittext"
+        android:text="Not yet registered? SignUp Now"
+        android:textAlignment="center"
+        android:textColor="#C9822A"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+</ScrollView>
